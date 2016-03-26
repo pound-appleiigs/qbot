@@ -1,0 +1,60 @@
+
+int qbot_init((char *)quotesfile, (char *)quotehashfile);
+
+  initializes libqbot.  do this first, pass it the path to
+  quotes and the name of the hash file or "" (will default
+  to /path/to/quotes/file/quotes.hash)
+
+  also can call this after libqbot is initialized, and it
+  will reopen quotes file and reload the hash file/rebuild
+  if necessary.
+
+  returns:  0 on success, -1 on failure.  use qbot_readline()
+  to get error message.  do not call any other libqbot functions.
+
+
+void qbot_shutdown(void);
+
+  shuts down qbot.  frees all memory.
+
+
+int qbot_version(void);
+
+  after calling, use qbot_readline() to retreive version string.
+
+
+int qbot_gettotalquotes(void);
+
+  returns total number of quotes.  also puts "x quote[s]" to be
+  retreived by qbot_readline().
+
+
+int qbot_getquotestats((char *)criteria);
+
+  returns number of quotes that match 'criteria'.  (list of nicks
+  with &&, ||, ().  ! not supported yet)  also returns -1 on error,
+  use qbot_readline() to retreive error message.  also puts "x quote[s]"
+  to be retreived by qbot_readline().
+
+
+int qbot_getquoteall(void);
+
+  finds a random quote from any of the quotes.  use qbot_readline()
+  to retreive lines of quote.  returns -1 on error.  use qbot_readline()
+  to retreive error message.
+
+
+int qbot_getquote((char *)criteria);
+
+  finds a random quote from quotes that match 'criteria'.  (list of
+  nicks with &&, ||, ().  ! not supported yet)  use qbot_readline()
+  to retreive lines of quote.  returns -1 on error.  use qbot_readline()
+  to retreive error message.
+
+
+char *qbot_readline(void);
+
+  grabs the next line of output from qbot.  returns null if nothing
+  is left.  errors are always one line, not that it matters.
+
+

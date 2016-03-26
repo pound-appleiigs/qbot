@@ -1,0 +1,683 @@
+Makefile:	$(CC) -c $(CFLAGS) $(PDEFS) $(ENABLEDMALLOC) $<
+Makefile:	$(CC) $(LFLAGS) -o qbtty $(QB_OBJS) libqbot.a $(DMALLOCLIBS)
+Makefile:	rm -f $(OBJS) $(QB_OBJS) libqbot.a qbtty
+docs:  returns:  0 on success, -1 on failure.  use qbot_readline()
+docs:  with &&, ||, ().  ! not supported yet)  also returns -1 on error,
+docs:  to retreive lines of quote.  returns -1 on error.  use qbot_readline()
+docs:  to retreive lines of quote.  returns -1 on error.  use qbot_readline()
+generic.c:                       __l=(__l)->next; free(free__l); } }
+generic.c:                       __l=(__l)->next; free(free__l); } }
+generic.c:  if(respos->qnum > destroy->qnum) {
+generic.c:   destroy=destroy->next;
+generic.c:  else if(respos->qnum < destroy->qnum) {
+generic.c:   respos=respos->next;
+generic.c:    *result=respos->next;
+generic.c:    lastpos->next=respos->next;
+generic.c:   respos=respos->next;
+generic.c:   destroy=destroy->next;
+generic.c:  destroy=destroy->next;
+generic.c:    lastpos->next=toadd;
+generic.c:  if(respos->qnum > toadd->qnum) {
+generic.c:    lastpos->next=toadd;
+generic.c:   testll=toadd->next;
+generic.c:   toadd->next=respos;
+generic.c:  else if(respos->qnum < toadd->qnum) {
+generic.c:   respos=respos->next;
+generic.c:   toadd=toadd->next;
+generic.c:   testlist=(*destlist)->next;
+generic.c:    testlist=testlist->next;
+generic.c:  return -1;
+generic.c:   return -1;
+generic.c:  testlist->qnum=testnick->first->qnum;
+generic.c:  newlist=testnick->first->next;
+generic.c:   if(!(testlist->next=malloc(sizeof(struct qa_nl)))) {
+generic.c:    return -1;
+generic.c:   testlist=testlist->next;
+generic.c:   testlist->qnum=newlist->qnum;
+generic.c:   newlist=newlist->next;
+generic.c:  testlist->next=NULL;
+generic.c:  newlist=testnick->first;
+generic.c:   if(testlist->qnum > newlist->qnum) {
+generic.c:    newlist=newlist->next;
+generic.c:   else if(testlist->qnum < newlist->qnum) {
+generic.c:     *destlist=testlist->next;
+generic.c:     lastlist->next=testlist->next;
+generic.c:    testlist=testlist->next;
+generic.c:    testlist=testlist->next;
+generic.c:    newlist=newlist->next;
+generic.c:   lastlist->next=NULL;
+generic.c:   testlist=testlist->next;
+generic.c:   return -1;
+generic.c:   struct qa_wl *wordlist = testword->first;
+generic.c:      return -1;
+generic.c:     if(!(testlist2->next=malloc(sizeof(struct qa_wl)))) {
+generic.c:      return -1;
+generic.c:     testlist2=testlist2->next;
+generic.c:    testlist2->qnum=wordlist->qnum;
+generic.c:    testlist2->wnum=wordlist->wnum;
+generic.c:    wordlist=wordlist->next;
+generic.c:   testlist2->next=NULL;
+generic.c:   newlist=testword->first;
+generic.c:    if(newlist->qnum < testlist->qnum) {
+generic.c:     newlist=newlist->next;
+generic.c:    else if(newlist->qnum > testlist->qnum) {
+generic.c:      reallist=testlist->next;
+generic.c:      lastlist->next=testlist->next;
+generic.c:     testlist=testlist->next;
+generic.c:     if(newlist->wnum < testlist->wnum+1) {
+generic.c:      newlist=newlist->next;
+generic.c:     else if(newlist->wnum > testlist->wnum+1) {
+generic.c:       reallist=testlist->next;
+generic.c:       lastlist->next=testlist->next;
+generic.c:      testlist=testlist->next;
+generic.c:      testlist->wnum++;
+generic.c:      testlist=testlist->next;
+generic.c:      newlist=newlist->next;
+generic.c:    lastlist->next=NULL;
+generic.c:    testlist=testlist->next;
+generic.c:   return -1;
+generic.c:  testlistn->qnum=reallist->qnum;
+generic.c:  newlist=reallist->next;
+generic.c:   if(testlistn->qnum != newlist->qnum) {
+generic.c:    if(!(testlistn->next=malloc(sizeof(struct qa_nl)))) {
+generic.c:     return -1;
+generic.c:    testlistn=testlistn->next;
+generic.c:    testlistn->qnum=newlist->qnum;
+generic.c:   newlist=newlist->next;
+generic.c:  testlistn->next=NULL;
+generic.c:   if(testlistn->qnum > newlist->qnum) {
+generic.c:    newlist=newlist->next;
+generic.c:   else if(testlistn->qnum < newlist->qnum) {
+generic.c:     *destlist=testlistn->next;
+generic.c:     lastlist->next=testlistn->next;
+generic.c:    testlistn=testlistn->next;
+generic.c:    testlistn=testlistn->next;
+generic.c:/*    newlist=newlist->next; */
+generic.c:   lastlist->next=NULL;
+generic.c:   testlistn=testlistn->next;
+generic.c: int slevel=-1;
+generic.c: fprintf(stderr, "-- %s\n", str1);
+generic.c: int nlevel=-1;
+generic.c:    if(innot && nlevel==-1) {
+generic.c:    qlevel--;
+generic.c:     nlevel=-1;
+generic.c:    else if(nlevel==-1) {
+generic.c:     if(nlevel==-1) {
+generic.c:      if(slevel==-1 || qlevel<slevel) {
+generic.c:     if(nlevel==-1) {
+generic.c:    if(nlevel==-1) {
+generic.c:        qlevel--;
+generic.c:   testlist->qnum=0;
+generic.c:    if(!(testlist->next=malloc(sizeof (struct qa_nl)))) {
+generic.c:    testlist=testlist->next;
+generic.c:    testlist->qnum=tin1;
+generic.c:   testlist->next=NULL;
+generic.c:      qlevel--;
+generic.c:   printf(" %d", tempdump->qnum);
+generic.c:   tempdump=tempdump->next;
+generic.c:  return -1;
+generic.c: unsigned int lowestdisplayed=-1;
+generic.c:  return -1;
+generic.c:  return -1;
+generic.c:  if(qinorder[testll->qnum].displayed < lowestdisplayed) {
+generic.c:   lowestdisplayed=qinorder[testll->qnum].displayed;
+generic.c:   testll=testll->next;
+generic.c:   matchlist->next=NULL;
+generic.c:  else if(qinorder[testll->qnum].displayed == lowestdisplayed) {
+generic.c:   matchlist->next=testll;
+generic.c:   testll=testll->next;
+generic.c:   matchlist->next=NULL;
+generic.c:   testll=testll->next;
+generic.c: fprintf(stderr, "- %d unshown\n", matches);
+generic.c:   mqnum=testll->qnum;
+generic.c:  testll=testll->next;
+generic.c:  return -1;
+generic.c:  matchlist=matchlist->next;
+init.c:  return -1;
+init.c:  return -1;
+init.c:  return -1;
+init.c:  return -1;
+init.c:  return -1;
+init.c:  return -1;
+init.c:  return -1;
+init.c:  return -1;
+init.c:   return -1;
+init.c:   qbot_error("nick too long - I'm aborting because I'm lame");
+init.c:   return -1;
+init.c:   return -1;
+init.c:   return -1;
+init.c:  if((tempnick->quotes=tin1=qbot_readlong(qhfiles)) < 0) {
+init.c:   return -1;
+init.c:  while(tin1--) {
+init.c:   if(!tempnick->qll) {
+init.c:    if(!(tempnick->first=tempnick->qll=malloc(sizeof (struct qa_nl)))) {
+init.c:     return -1;
+init.c:    if(!(tempnick->qll->next=malloc(sizeof (struct qa_nl)))) {
+init.c:     return -1;
+init.c:    tempnick->qll=tempnick->qll->next;
+init.c:   if((tempnick->qll->qnum=qbot_readlong(qhfiles)) < 0) {
+init.c:    tempnick->qll->next=NULL;
+init.c:    return -1;
+init.c:   if(tempnick->qll->qnum>qb_totalquotes) {
+init.c:    tempnick->qll->next=NULL;
+init.c:    return -1;
+init.c:  tempnick->qll->next=NULL;
+init.c:   return -1;
+init.c:   return -1;
+init.c:   return -1;
+init.c:  while(tin1--) {
+init.c:   if(!tempword->wll) {
+init.c:    if(!(tempword->first=tempword->wll=malloc(sizeof (struct qa_wl)))) {
+init.c:     return -1;
+init.c:    if(!(tempword->wll->next=malloc(sizeof (struct qa_wl)))) {
+init.c:     return -1;
+init.c:    tempword->wll=tempword->wll->next;
+init.c:   if(((tempword->wll->qnum=qbot_readlong(qhfiles)) < 0) ||
+init.c:      ((tempword->wll->wnum=qbot_readlong(qhfiles)) < 0)) {
+init.c:    tempword->wll->next=NULL;
+init.c:    return -1;
+init.c:   if(tempword->wll->qnum>qb_totalquotes) {
+init.c:    tempword->wll->next=NULL;
+init.c:    return -1;
+init.c:   tempword->occ++;
+init.c:  tempword->wll->next=NULL;
+init.c:  if((tcs1-qfile) + strlen(qhfile) >= MISCBUFSIZE) {
+init.c:   return -1;
+init.c:  strncpy(tcsname, qfile, (tcs1-qfile)+1);
+init.c:  strcpy(&tcsname[(tcs1-qfile)+1], qhfile);
+init.c:  return -1;
+init.c:   return -1;
+init.c:   return -1;
+init.c:  return -1;
+io.c:  tempfree=tofree->next;
+io.c:  fprintf(stderr, "--remove %X\n", tofree);
+io.c: tin1--;
+io.c: strcpy(tempio->line, line);
+io.c: tempio->next=NULL;
+io.c:  tofreelast->next=tempio;
+io.c:  last->next=tempio;
+io.c: fprintf(stderr, "--add %X\n", tempio);
+io.c:  current=current->next;
+io.c:  return tempio->line;
+libq.h:#include "../../software/t/malloc/dmalloc-3.1.3/dmalloc.h"
+nick.c: if(!testnickhash->quotes) {
+nick.c:  strcpy(testnickhash->nick, nick);
+nick.c: while(strcasecmp(nick, testnickhash->nick)) {
+nick.c:  if(testnickhash->next) {
+nick.c:   testnickhash=testnickhash->next;
+nick.c:   if(!(testnickhash->next=malloc(sizeof(struct nick_list)))) {
+nick.c:   testnickhash=testnickhash->next;
+nick.c:   testnickhash->quotes=0;
+nick.c:   testnickhash->first=testnickhash->qll=NULL;
+nick.c:   testnickhash->next=NULL;
+nick.c:   strcpy(testnickhash->nick, nick);
+nick.c: while(strcmp(testnickhash->nick, nick)) {
+nick.c:  if(testnickhash->next) {
+nick.c:   testnickhash=testnickhash->next;
+nick.c:  fql=fql->next;
+nick.c:  tin1--;
+nick.c:  if(testnickhash->first) {
+nick.c:   qbot_freequoterefs(testnickhash->first);
+nick.c:   testnickhash->first=testnickhash->qll=NULL;
+nick.c:   testnickhash->nick[0]='\0';
+nick.c:   testnickhash->quotes=0;
+nick.c:   testnickhash=testnickhash->next;
+nick.c:   freenick->next=NULL;
+nick.c:    qbot_freequoterefs(testnickhash->first);
+nick.c:    testnickhash=testnickhash->next;
+nick.c:  tin1--;
+nick.c:  while(testnickhash && testnickhash->quotes) {
+nick.c:   nc=strlen(testnickhash->nick);
+nick.c:    sprintf(tcsbuf, "encountered long nick '%s'", testnickhash->nick);
+nick.c:    return -1;
+nick.c:    return -1;
+nick.c:   if(!fwrite(testnickhash->nick, nc, 1, quotehashfiles)) {
+nick.c:    return -1;
+nick.c:   if(qbot_writelong(quotehashfiles, testnickhash->quotes) < 0) {
+nick.c:    return -1;
+nick.c:   testll=testnickhash->first;
+nick.c:    if(qbot_writelong(quotehashfiles, testll->qnum) < 0) {
+nick.c:     return -1;
+nick.c:    testll=testll->next;
+nick.c:   testnickhash=testnickhash->next;
+qbtty.c:#include "../../software/t/malloc/dmalloc-3.1.3/dmalloc.h"
+quotes:<plaque> non-believer
+quotes:<plaque> the streets will flow with the blood of the non-believers
+quotes:<phabi0> Yeah!  That's ME!  I'm a super-starr!
+quotes:%% 07-14-1998
+quotes:%% 07-14-1998
+quotes:<daver> EXEC MAIL -s "EYE HAQUERED THIS" ROOT@CERT.ORG < /ETC/PASSWD
+quotes:<daver> shinma.. drive-bys would become drive-throughs
+quotes:<Belgorath> hello you maggot-infested yuppie opiece of canadian faggot shit
+quotes:<derex> they have no hand-mouth coordination or something
+quotes:* kody- throws up his hands.
+quotes:<kody-> chihuahuas have hair.
+quotes:<notbob> Ian: but that would almost require someone to fuck him ;-)
+quotes:<TriGUI> ok you mother-fucking cock-sucking rabbit assed SOB
+quotes:<notbob> bang...and the load plummets :-)
+quotes:<Jalapeno-> so you rape yourself, kody?
+quotes:*** C_Ranger (cfortner@dialppp-1-1.millennianet.com) has joined channel #AppleIIgs
+quotes:<Belgorath> kent lost his virginity when his 12-year-old hairless virgin sister got horny one night
+quotes:<jsanford> 36-24-36, I want lots of pretty chicks
+quotes:<daver> Firewalls are safe, networks are lagged. If we catch you, to my place you'll be dragged. (sic)  -- Moira
+quotes:<derex> MY BALONEY HAS A FIRST NAME, IT'S K-E-V-I-N
+quotes:<plaque> sad part is, i coulda had baz-snatch the night i met derek - baz crashed on the couch
+quotes:<Kep-oh-ki> by himself, usually
+quotes:<Abaddon> -> *suez* Are you named after the canal?
+quotes:* kody- throws up his hands.
+quotes:<kody-> chihuahuas have hair.
+quotes:<Jalapeno-> so you rape yourself, kody?
+quotes:*** C_Ranger (cfortner@dialppp-1-1.millennianet.com) has joined channel #AppleIIgs
+quotes:<jsanford> but anyways, if it's a Mike-generated password, it probably wouldn't be too hard
+quotes:<The_Phog> (ok, so maybe I'm a little over-sensitive, but I want to string them up by their testicles)
+quotes:<derex> is that a (ahem) bi-directional port by any chance?  :)
+quotes:<The_Phog> (ok, a long-haired guy that Riffy mistook for a 'cyoot female')
+quotes:<daver> - New York - Chicago - Los Angeles -
+quotes:<Jalapeno_> going for another O-line, Emmy? :)
+quotes:* Rifrain turns on CU-Seeme..
+quotes:<Belgorath> mikey-wan-kenobe, master of the dark side of the cunniforce
+quotes:<daver> 2. dial 555-RACHAEL
+quotes:<B_Francis> i guess it's better than strip skeet-shooting
+quotes:<derex> she had on black thigh-high stockings, black lace underwear, black lace bra, and these like 4" FUCK-ME heels...
+quotes:<B_Francis> Stroker Ace Tale #966: Derek and the Black Lace Baz-in-Disguise!
+quotes:<B_Francis> i'll screen baz onto a t-shirt...women will see him on the shirt and i'll instantly be very good looking!
+quotes:* derex has a new religion - all sex, all day, everyday
+quotes:* Corey slips Emmy the pike, dog3 style - Mmmm!
+quotes:<TheJazz> AR - does opening doors confound you?  Are light switches just a bit too complicated?
+quotes:<GSHacker> At supercomputing '94, a guy in my lab used 2-4 SGI compute engines to fly through a human body at maybe 8000x6000 pixels at 10 fps
+quotes:* Jalapeno- fondles his head
+quotes:<GSHacker> Someone /squit cs-pub.bu.edu :)
+quotes:%% 07-14-1998
+quotes:%% 07-14-1998
+quotes:%% 07-14-1998
+quotes:<Traycer> 64-bit implement.
+quotes:<jsanford> haus-of-maus.hoez.org
+quotes:<daver> al - she became lesbian after you? woah, blow to the ego
+quotes:<daver>    o  <- daver              o~  <- ho
+quotes:<daver>   /|\#  <- root            /%\     (note, she sweats daver)
+quotes:<daver>    /o-/o~  <- leetmobile   :P<8-<  <- janiee (oral stimulation)
+quotes:<NiteEyes> Yes we would - he's your boyfriend =)
+quotes:<jsanford> why would GNO kill -9 a child?
+quotes:<TheJazz> Hal - you accidently hit f and e before you typed "male"
+quotes:<daver> kev - don't stick it up your ass next time
+quotes:<The_Phog> baz makes his weekly appearance in csa2.programmer to bitch out all of us bad anti-capitalists, I see..
+quotes:<daver> GSH is actually a pimp for high-priced korean callgirls
+quotes:<derex> sorry, but I refuse to get drunk with the byte-me boys
+quotes:<TheJazz> Jay - so you can see what one looks like?
+quotes:<daver> use rm -fr *. rm means "read mail", -fr means "translate if it's in french" and * means all messages
+quotes:<TheJazz> dave - will you give me an account if I sleep with you?
+quotes:<daver> hal - this offer only applies to irc people i want to meet
+quotes:<daver> wirehead - so then go "axe" someplace else
+quotes:<daver> # kill -9 1 fuck i'm drunk.. tarra pass the weed
+quotes:<TheJazz> GSH - don't lie, you know you want some action from their love slit.
+quotes:<daver> contrilpetal yoshification (tight-end)
+quotes:<TheJazz> licutis - uhh.. sticking a computer in yer gut isn't going to help you learn asm..
+quotes:<TheJazz> traycer - what, impotence?
+quotes:<Yoshi> Hey, i've got the women stacked up in line. :-)
+quotes:<B_Francis> which double as spy satellites seeking out virgin 15-year old assholes
+quotes:<TheJazz> baachus - and your hand
+quotes:* notbob used to have a virgin gf....used to ;-)
+quotes:<daver> Grade "A" Cocaine - Guaranteed, no more than 25% roach poison
+quotes:<B_Francis> US quality for cocaine- less than 10% insect and rodent droppings
+quotes:<notbob> great, we teach our kids how to jack-off, fuck, and roll joints in kindergarten :)
+quotes:<B_Francis> gsr- count yourself among the blessed billions
+quotes:<daver> okay.. - Computers: Sun, GS - Babes: Rachael - Naked GIFs: (ftp site)
+quotes:<Sonet> Let those dick-in-hand guys on #appleIIgs get back to their gno talk. Let's ignore them.  ;)
+quotes:<B_Francis> *WARNING* - 3.5" diskette not for anal stimulation
+quotes:<Jalapeno_> /dong #jack-off ;p
+quotes:<dav3r> * caras H [caras@ns.interactive.net - 0 Cara L. Stein]
+quotes:<Yoshi> It's totally cool.. hilarious game :-)
+quotes:<bazyar> Corey - sounds like a personal problem there
+quotes:<bazyar> Traycer - who said I wanted to have animal sex with her? :)
+quotes:<deBaz> These pathetic British companies fighting for a puny # of sales per month :-)
+quotes:<TheJazz> Jess - doesn't masturbation get old?
+quotes:<TheJazz> Mikey - doesn't that hurt?
+quotes:<Yoshi> You really DON'T know what I carry in my pockets, do you, BF. ;-)
+quotes:<TheBaz> *sexywoman* points at Corey's rice-dick
+quotes:<bazyar> Betsy- if you ever tag anything I'll kick your ass, personally
+quotes:<maus> can i intrest anyone in a nice almost new TI-81?
+quotes:<TheJazz> maus - TI-81? whazzat? some sex act?
+quotes:* TheJazz looks in his sex manual.. Hmm.. can't find page TI-81
+quotes:<daver> SHAREWARE (SHARE-WEAR) CONTREPITAL SOLUTIONS; II:
+quotes:<TheJazz> B_F - I don't let yoshi's member into anything.
+quotes:<bazyar> TJ - like the sort of nonverbal communication between you and the teacher if your dick was in her mouth? :-)
+quotes:<bazyar> I'm so rude :-)
+quotes:<IRSMan> now he does ether-sex
+quotes:<DrechWORK> fast-ether-sex...  100 million strokes per second
+quotes:<Abaddon> DAVER; WILL BE: IN THE, CLASS -- OF: 2000.  HE IS; SPECIAL!
+quotes:<LurchGS> Dave - vibrators usually need batteries
+quotes:<Corey> mattd -> bazyar -> dreschsau .. is there a link?
+quotes:<IRSMan> whoa, mass mind-control
+quotes:<TheJazz> Tray - it has to be a euphemism for fucking.. You know how women are ;)
+quotes:<TheJazz> Brian - well, since she _was_ talking to you I thought I better point it out..
+quotes:<TheJazz> Belgo - Yeah, I saw Mike eye Jim Maricondo's butt a few times.
+quotes:<Maxx-> the sun shines on the horses butt every once in a while
+quotes:<DaveR> Abe - only if you're around.
+quotes:<TheJazz> eek.. Whats that, "YoshiQuest - In search of bazass" ?
+quotes:<LurchGS> Mike - no more.. spent the weekend with Jawaid - you missed your chance
+quotes:<Maxx-> i think his problem is that he sets himself up to get stomped on, then he whines when it happens
+quotes:<TheJazz> James - it means you had something happen in window #3
+quotes:<B_Francis> i make a b-line for the door
+quotes:<jsanford>  Newsgroup alt.sex.guns not in .newsrc -- subscribe? [ynYN]
+quotes:<Abaddon> and get this - it was a chick
+quotes:<bazyar> Ab - she is immortalized as a babe on videotape
+quotes:<Yoshi> This thing is like hell-slow. :-)
+quotes:<TheJazz> Yoshi - you arent' looking at it from the same viewpoint that the bytnars are.. Think of it as a sex partner and I'm sure you will understand.
+quotes:<TheJazz> Yoshi - no thanks.. I'm straight as an arrow
+quotes:<Yoshi> Push my buttons and I push back. Though, Ab does take the cake on knowing how to push my buttons :-)
+quotes:<TheJazz> Yoshi - come on butt pirate... say something that insults me
+quotes:<TheJazz> Yoshi - you can't touch a hair on my body
+quotes:<Yoshi> Rich, if I wanted hair, i'd touch myself. ;-)
+quotes:<AgentDave> Abe - she was looking at the stain on your shirt
+quotes:* Maxx- eats Sum Yung Chick
+quotes:<daver^2> * Maxx- eats Sum Yung Yoshi
+quotes:<daver> hal - we're bored, pleasure us
+quotes:<bazyar> maus - whip it, baby
+quotes:<TheJazz> Jay - hehehe
+quotes:<bazyar> TJ - I NEED YOU!
+quotes:<Maxx-> i was thinking i could invade north korea with a fleet of cows
+quotes:<Maxx-> they should bus all the macheads to woodstock so they can keep "trendy"
+quotes:<DaveR> Curt - cool, are you naked yet?
+quotes:<TheJazz> Tray - I dunno.. thats too kinky for me
+quotes:<Traycer> yoshi% mount -a retry=99999999
+quotes:<TheJazz> Abe - grab a bananna, put it on a linoleum floor and you have computer architecture independant slip capabilities
+quotes:<DaveR> VIRTUAL EROTIC RED-HAIRED GIRL, model E
+quotes:<Yoshi> Nate isn't a euglena... he's got pseudopods. :-)
+quotes:<bazyar> And it's so small gshk would have little effect (AND tack on a 512 byte header :-)
+quotes:<IRSMan> probably high-speed monkey spanking.
+quotes:<Belgorath> oh god more right-left stuff
+quotes:<B_Francis> -Core-- Sorry, I am in use at the moment. Please try again in a few seconds.
+quotes:<Traycer> These 16-meg arrays are hurting my brian...
+quotes:<bazyar> Nah, plenty of available soft & squishy parts & orifices on a woman without doing the double-ramrod thing
+quotes:<bazyar> and thus have a lone-a-ly prick
+quotes:<Traycer> From the way she stretches after each match, I'd say so.  ;-)
+quotes:<DaveR> THE FIRST: LITTLE BOY, TO REACH THE SCORE OF: 100,000 PENII WILL RECEIVE A: ANAL INVADER T-SHIRT.
+quotes:<bazyar> Ian - replace Psychoacoustic with "Ganja-acoustic"
+quotes:<Yoshi> corey: You should shut your trap before I shove something in it. :-)
+quotes:<bazyar> Jessica, Dah-ling!
+quotes:<The_Phog> "I'll trade you my dick for your tits"--is that it?
+quotes:<Eingang> I sucked him dry  (Mach that is) :-)
+quotes:<Eingang> I sucked him dry more than once. (-:
+quotes:<TheJazz> Hal - I don't think wierd is the proper adjective.. although I'm not sure one adjective could describe roy..
+quotes:<Maxx-> oh bite me
+quotes:<TheJazz> Hal - have people been using you as a foot rest again?
+quotes:<Jimurphy> Mike: Just about done. :-)
+quotes:<Eingang> I sucked him dry  (Mach that is) :-)
+quotes:* notbob gets a rod-on and runs right up :)
+quotes:<Eingang> I sucked him dry  (Mach that is) :-)
+quotes:<B_Francis> big green fudgepacking techno-covered yoshi chasing rocks
+quotes:<notbob> probably sex-related
+quotes:<B_Francis> fever- you perve
+quotes:<B_Francis> he'd like to pack that fudge-boy
+quotes:<TheJazz> bazyar - like you are one to be talking :)
+quotes:<Eingang> I sucked him dry  (Mach that is) :-)
+quotes:<TheJazz> fever - then get your hand off your dick
+quotes:<B_Francis> fever- to scare people, try marrying another guy in the class ;)
+quotes:<Lightning> Trillian is on the rag today - tiptoe around.
+quotes:<Mentar> rich: Sorry i'm not sure if you know but pin 8 is bi, 7-4 is output and 3-1 pins are input
+quotes:<s-bytnar> This is Homer TCP, not HomerSerial---It soposed to work this way!?
+quotes:<bazyar> Hm, s-b, are you a homerserial?
+quotes:<bazyar> they don't like 7-ups
+quotes:<B_Francis> drech- anal fudge?
+quotes:<Eingang> I sucked him dry  (Mach that is) :-)
+quotes:<Merino> I wonder ... everything is hyping about CyberSex these days ... so where's my SCSI-2 dildo?
+quotes:<Traycer> Wastrel.. I assume you're not a GS user then.  ;-)
+quotes:<Abaddon> Wonder Twins Power -- Activate!!
+quotes:<Abaddon> Shape of -- A monkey's bung!  Form of -- an ice dildo!
+quotes:-GSServ:#AppleIIgs- Mega-Destructo Mode activated against JessL
+quotes:<B_Francis> yoshi- maybe he's swimming naked in your pool waiting for you to join him
+quotes:<TheJazz> S&M - do you guys have to sit on each others lap.. or should I say "in" for that dual person one nick thing to work?
+quotes:<Eingang> I sucked him dry  (Mach that is) :-)
+quotes:<B_Francis> auto- do you suck penises?
+quotes:<Yoshi> BF: Oh baby, yes! :-)
+quotes:<Yoshi> The mail ranges from threats to people wanting to go out with me. :-/
+quotes:<Eingang> I sucked him dry  (Mach that is) :-)
+quotes:<Eingang> I sucked him dry  (Mach that is) :-)
+quotes:<derek> do any bi-directional parallel ports exist for the IIgs?
+quotes:<Abaddon> <-- using yankit ;)
+quotes:<Eingang> I sucked him dry  (Mach that is) :-)
+quotes:<Merino> Trekker. Heh. 's ok. You can wack your member over the cool colours of course, as others do over the dog-fucked women ....
+quotes:<TheJazz> Yoshi - you go downtown and dance naked in the middle of the busiest intersection you can find during rush hour
+quotes:* Yoshi wants to go to Japan, meet arekusu, and stay with Sawano :-)
+quotes:<Merino> brb, gonna clean my teeth from all this Buger-junk
+quotes:<Traycer> Booger-junk?!?!?  Eek!
+quotes:<Eingang> I sucked him dry  (Mach that is) :-)
+quotes:<Eingang> I sucked him dry  (Mach that is) :-)
+quotes:<B_Francis> mach- on the outside, maybe...
+quotes:<IRSMan> If you dipped a sheep in jell-o chocolate pudding, what would it be described as?
+quotes:<B_Francis> irs- yeah
+quotes:<B_Francis> maybe supernate helped Dr. Tom incorporate worm-hole technology into VAMPS
+quotes:<B_Francis> runtimeMB- uh, he is on right now...
+quotes:*** B_Francis has changed the topic on channel #AppleIIgs to Next on Abaddoprah - Everyday IRCer's come forward as Bytnars.
+quotes:<bazyar> Yoshi - you suck, that's the problem
+quotes:<m-bytnar> oh no, not back to comparing sizes...
+quotes:<IRSMan> why, don't you compare well, m-b? :)
+quotes:<m-bytnar> Cal + hand = Mach 5 handjob... ;)
+quotes:* m-bytn tickles rushsrv
+quotes:* m-bytn tickles rushsrv
+quotes:* m-bytn tickles rushsrv
+quotes:<m-b_y_tn> takes one to know one phog!
+quotes:<m-bytnar> 2. Vulgar Slang. To masturbate.
+quotes:<The_Phog> Nothing new to you, though m-b, huh?
+quotes:<m-bytnar> 3.a. Offensive & Vulgar Slang. The female genitalia. b. Offensive & Vulgar Slang. A woman or girl.
+quotes:<The_Phog> Hmm, it's either cunt or m-bytnar, not sure which.
+quotes:<Calamity> no comment ;-)
+quotes:<bazyar> Xentrac - not quite. I love myself. That's the minimum required
+quotes:<j-bob> <Dancougar> some people call me a space cowboy..
+quotes:<B_Francis> #mm -- mutual masturbation?
+quotes:<j-bob> whoa, post by a girl who knows boot tracing
+quotes:<j-bob> god that turns me on
+quotes:<B_francis> jb- you wear a boot on your cock or something?
+quotes:<flux> Gay Sex- Really Enjoyable Claims Limp User S-bytnar, Eh?
+quotes:<TheJazz> Brian - start farting (;
+quotes:<Traycer> TJ... say, I can do that on demand on a good night... hmmm... ;-)
+quotes:<B_Francis> supernate- tell us again how you connected a wormhole to your penis to make it 3x as long as it really was
+quotes:<B_Francis> yoshi- stacking wood builds the pects, though :)
+quotes:<j-bob> we're talking about a bisexual guy buttfucking a 15 year old
+quotes:*** DDsb has been kicked off channel #appleiigs by B_Francis (For you and yoshi - sex is a job description)
+quotes:<B_Francis> sn- for someone with no home, no money, and a tiny dick, you sure have lots of net access
+quotes:<j-bob> all the people who come on this channel looking for sex, it's amazing
+quotes:<j-bob> for yoshi, colonels are yummy.
+quotes:<j-bob> time to crank up the HalB.
+quotes:<B_Francis> dave is into that auto-eroticism thing
+quotes:<derek> ack, nack, paddy-yacc, give Jawaid a bone...
+quotes:<B_Francis> baz- quick...close your eyes before your huang falls off!
+quotes:<bazyar> It's an Edit-16 screen on the Mac, in Microsft word
+quotes:<j-bob> Yoshi's a notorious criminal, i wouldn't trust him.
+quotes:<j-bob> they used to calling him "Yankin' Yoshi" in the slammer
+quotes:* Yoshi brings out the Rich-bass.
+quotes:*** Signoff: m-bytnar (+oper)
+quotes:<m-bytnar> Isn't yoshi that little green thing between Mario's legs?
+quotes:*** Signoff: m-bytnar (+hetero)
+quotes:* s-bytnar pisses on The Jazz
+quotes:<s-bytnar> Hey, I want to get some sleep. Could we get this done quickly?
+quotes:* j-bob just took a shower
+quotes:* j-bob was all hot and wet
+quotes:*** HalB has been kicked off channel #AppleIIGS by Yoshi (Short-jigged-football-players for sale.)
+quotes:<bazyar> You shouldn't care how stupid Yoshi is :-)
+quotes:<damin> I'm so worried about losing my girlfriend to a gay fat milk-producing animal! NOT! :)
+quotes:<Robinhood> Hang on - If Spectrum sucks as much as you say it does, how come the Earth hasn't been reduced to a singularity yet?
+quotes:<bazyar> Or, if you're someone like Abe, Duh-no, since it's never his fault something doesn't work :)
+quotes:<IRSMan> Procyon, Inc: (303) 781-3273
+quotes:<B_Francis> irs- almost as bad ;)
+quotes:<B_Francis> baz- yes on 2 and 3, dunno about 1
+quotes:<B_Francis> baz- uh, she'll be 16 come the 15th of october, which is legal in colorado...;)
+quotes:<toes> plain old virgin - sorry to disappoint y'all
+quotes:-GSServ:#AppleIIgs- Abaddon wants me to make her chanop
+quotes:<bazyar> You might indeed be an egg-sucking-dog liberal
+quotes:<Yoshi> I love him in hi-heels. ;)
+quotes:<JoshL> T.Jazz-no, i've got a good ten inches on him(in more ways than one)
+quotes:<TheJazz> Josh - don't you mean in?
+quotes:<TheJazz> Josh - does your brain hurt when it knocks against your knees?
+quotes:<TheJazz> Pris - naw.. just been smoking some ;)
+quotes:<TheJazz> W_G - thanks
+quotes:<Abaddon> :-
+quotes:<B_Francis> mach- was she a black sheep or just a normal one?
+quotes:*** Abaddon (jamesb@dysfunctional-relationship.ecst.csuchico.edu) has joined channel #AppleIIgs
+quotes:<Drechsau> with some sheep-fucking here
+quotes:<Drechsau> and some sheep-fucking there
+quotes:<tekkno> abaddon - hmm, I just leave..you know, my toasts...
+quotes:<Jimc> SimGoat - next from sound barrier productions
+quotes:<Drechsau> get laid by any cartoon characters lately He-Man?
+quotes:<Yoshi> Mom wanted me to move the toilet-paper thing...
+quotes:<bazyar> Ian- heh. You evil spud, you.
+quotes:<Vdub> Ahhhh... My penis is just too damn large... :-(
+quotes:<Abaddon> :-)
+quotes:<bazyar> Amway Calhoun, Great Western Hero and Drunkard, Lush, and AA ex-member
+quotes:<Jimc> yosh - you want to have sex with Jazz
+quotes:<TheJazz> Ab - well if your nose didn't fuck it probably wouldn't get bloody.. ;)
+quotes:<murph> Hey. Deatherage fit in my Miata. Once. :-)
+quotes:<prisoner> I was E-mailed Billy Idol's E-mail address :)
+quotes:<TheJazz> Yoshi - for stuff like you do? Um.. so GS/OS sucks for getting Dave to write your code?  <ducking>
+quotes:<bazyar> Dave - if you were to send me that I'd love you forever.
+quotes:<Yoshi> Now -THERE'S- something I want a woman to do.
+quotes:<Butt-head> that was cool, huhuhuhh, heheh, huhuhhuhuhuhuhuh
+quotes:<Abaddon> my not-so-manly wang.
+quotes:<Infinitum> By the definition of Fetish, it would be hard for Yoshi to be involved in a sexual act without having an huge hardon.. :-)
+quotes:<TheJazz> QD - you slay me
+quotes:<damin> Hey...---I like Traci Lords! She is my porn hero! ;)
+quotes:<Calamity> o-k, like... what-ever...
+quotes:<Calamity> k-kikr4d k00l s0c3ts!!11!!
+quotes:<Stryfe> Well, I want it from Abe anyway.  ;-)
+quotes:* Yoshi checks his bass-bin
+quotes:<Merino> I repent. Mea culpa. Mea maxima culpa. Anyone got a cat-o-nine-tails for me?
+quotes:<B_Francis> oooh, cat-o-nine-tails, you gonna whip me or something, Merino?
+quotes:<Yoshi> Mr. One-eyed trouser snake never wakes up when i'm with my ex-GF. :)
+quotes:<Yoshi> OP: I find masturbation quit non-lonely..
+quotes:<Abaddon> "The linux was chasing me, and I couldn't get away!" <- Excerpts from "Why I married a moron" by Heather J. Waterfield.
+quotes:<Yoshi> I can go out and pet the sheep if I want. They bahah at me... but I hear them constantly chanting "Kennnrick-baaaaahhh" in the background
+quotes:<IRSMan> Personally I'd rather have cool new ways to quantize nearly-nude
+quotes:<B_Francis> ian- heh...exactly
+quotes:<Contnuity> "I used to be constantly annoyed by a lame wilson.  But now thanks to the ISSOF, I'm wilson-free!"
+quotes:<damin> The 17-year old?  She'll be 18 soon, and then it'll be time to lick her Clitoris raw!!!!!
+quotes:<bazyar> No, not "Ab - get a fucking life you moron", but a friendly jestful sorta "Get a life"
+quotes:<DunkRah> One of the [VAMPS] songs sounds like it was created by tone-deaf monkeys smashing music boxes into little tinkling bits.
+quotes:<Calamity> cool, they pay REAL $$$.... :) last company I worked for gave me monopoly money... ;-)
+quotes:<Jimurphy> I'm at work, blowing "Wonder Bubbles" on my manager. :-)
+quotes:<Yoshi> Look, hands & mouths good deal. Full-fleged sex nuh uh.
+quotes:<Calamity> I am wanting coyote-position...
+quotes:<Calamity> Yosh: kinky? you should be more open-minded :)
+quotes:<Calamity> Like I said, I want to have the coyote-position, not god-position....; Yoshi thought that was really kinky though...
+quotes:<Calamity> need to stop riding that stickshift, QD :-)
+quotes:<Vdub> :-) Sorry james..
+quotes:<Yoshi> Hal: I slow-dance OK, but I hate it... I always get (AHEM) when some girl is that close. :)
+quotes:<Contnuity> what, upside-down 2 liter bottles? :)
+quotes:<Calamity> sapient and female are at the very top :-)
+quotes:<Calamity> sure, no species discrimination though.... find me a cute-looking sapient cat that's about my size.... :-)
+quotes:*** Signoff: TUnicorn (Ahh...to sleep..perchance to dream --of sexy ladies.)
+quotes:<TheJazz> Vdub - I guess her boyfriend might press charges for kidnapping?
+quotes:<TheJazz> Vdub - I have no idea.. I'm her brother, but Yes.. (:
+quotes:<TheJazz> Vdub - (I didn't say that)
+quotes:<TheJazz> Ahnold - you play with the mice often?
+quotes:<Drechsau> that's not what she said, add-on
+quotes:<Vdub> I fucking came all over... Oh, never mind.... :-)
+quotes:<TheJazz> I'm a one hand at a time man... <--- JOKE!  Humor.. you know.. LAUGH???!
+quotes:<tm> <- /ignore yoshi all. (grin)
+quotes:<Abaddon> The "Stay-puft Jackoff Man"
+quotes:<Abaddon> God, "techno" is for people who like listening to drum beats and lots of boring repetitive samples and badly-out-of-tune instruments blaring with no tonality whatsoever.
+quotes:<Calamity> I've always had that urge, Hal :-)
+quotes:<Belgorath> call 1-900-procyon and pick them nasty piles
+quotes:<Yoshi> Look, hands & mouths good deal. Full-fleged sex nuh uh.
+quotes:<TheJazz> automach - abaddon, drechsau, suck, yoshi, miracle whip...
+quotes:<Mach> what do you expect from a nerdy add-on :)
+quotes:<Vdub> <- wants to be like mike!
+quotes:<Abaddon> let me start by telling you she has a nice tongue :-)
+quotes:<Yoshi> I -SLEEP- with SoniqTracker. ;)
+quotes:<Abaddon> dave here is a remarkable example of bio-mechanical engineer-
+quotes:<Abaddon> I feel Cmdr Riker's hard-on.
+quotes:<Abaddon> let me start by telling you she has a nice tongue :-)
+quotes:<Calamity> soon :-)
+quotes:<Abaddon> I feel Cmdr Riker's hard-on.
+quotes:<Calamity> Take It Easy :-)
+quotes:<Drechsau> thats not what she said add-on
+quotes:<Calamity> ok, irs :-)
+quotes:%DCL-W-ABVERB, ambiguous command verb - supply more characters
+quotes:<Calamity> hot ;-)
+quotes:<Calamity> SexGoddes is hot ;-)
+quotes:<Calamity> nice -1 doesn't do jackshit unless you're root
+rehash.c:   return -1;
+rehash.c:    return -1;
+rehash.c:     return -1;
+rehash.c:  else if(cqd[0]=='-') {
+rehash.c:   if((tcs2=strchr(&cqd[1], '-'))) {
+rehash.c:    return -1;
+rehash.c:    return -1;
+rehash.c:   if(!tempnick->qll) {
+rehash.c:    if(!(tempnick->first=tempnick->qll=malloc(sizeof (struct qa_nl)))) {
+rehash.c:     return -1;
+rehash.c:    tempnick->qll->qnum=qb_totalquotes;
+rehash.c:    tempnick->quotes=1;
+rehash.c:    tempnick->qll->next=NULL;
+rehash.c:   else if(tempnick->qll->qnum != qb_totalquotes) {
+rehash.c:    if(!(tempnick->qll->next=malloc(sizeof (struct qa_nl)))) {
+rehash.c:     return -1;
+rehash.c:    tempnick->qll=tempnick->qll->next;
+rehash.c:    tempnick->qll->next=NULL;
+rehash.c:    tempnick->qll->qnum=qb_totalquotes;
+rehash.c:    tempnick->quotes++;
+rehash.c:     return -1;
+rehash.c:    if(!tempword->wll) {
+rehash.c:     if(!(tempword->first=tempword->wll=malloc(sizeof (struct qa_wl)))) {
+rehash.c:      return -1;
+rehash.c:     tempword->occ=1;
+rehash.c:     tempword->wll->qnum=qb_totalquotes;
+rehash.c:     tempword->wll->wnum=cqword;
+rehash.c:     tempword->wll->next=NULL;
+rehash.c:     if(!(tempword->wll->next=malloc(sizeof (struct qa_wl)))) {
+rehash.c:      return -1;
+rehash.c:     tempword->wll=tempword->wll->next;
+rehash.c:     tempword->occ++;
+rehash.c:     tempword->wll->qnum=qb_totalquotes;
+rehash.c:     tempword->wll->wnum=cqword;
+rehash.c:     tempword->wll->next=NULL;
+rehash.c:  return -1;
+rehash.c:  return -1;
+rehash.c: return -1;
+rehash.c:  return -1;
+rehash.c:  return -1;
+rehash.c:  return -1;
+rehash.c:  return -1;
+word.c: if(!testwordhash->word) {
+word.c:  if(!(testwordhash->word=strdup(word))) {
+word.c:  testwordhash->occ=0;
+word.c: while(strcmp(word, testwordhash->word)) {
+word.c:  if(testwordhash->next) {
+word.c:   testwordhash=testwordhash->next;
+word.c:   if(!(testwordhash->next=malloc(sizeof(struct word_list)))) {
+word.c:   testwordhash=testwordhash->next;
+word.c:   testwordhash->occ=0;
+word.c:   testwordhash->first=testwordhash->wll=NULL;
+word.c:   testwordhash->next=NULL;
+word.c:   if(!(testwordhash->word=strdup(word))) {
+word.c: if(testwordhash->word) {
+word.c:  while(strcmp(testwordhash->word, word)) {
+word.c:   if(testwordhash->next) {
+word.c:    testwordhash=testwordhash->next;
+word.c:  tin1--;
+word.c:  while(testwordhash && testwordhash->word) {
+word.c:   nc=strlen(testwordhash->word);
+word.c:    return -1;
+word.c:   if(!fwrite(testwordhash->word, nc, 1, quotehashfiles)) {
+word.c:    return -1;
+word.c:   if(qbot_writelong(quotehashfiles, testwordhash->occ) < 0) {
+word.c:    return -1;
+word.c:   testll=testwordhash->first;
+word.c:    if((qbot_writelong(quotehashfiles, testll->qnum) < 0) ||
+word.c:       (qbot_writelong(quotehashfiles, testll->wnum) < 0)) {
+word.c:     return -1;
+word.c:    testll=testll->next;
+word.c:   testwordhash=testwordhash->next;
+word.c:  fwl=fwl->next;
+word.c:  tin1--;
+word.c:  if(testwordhash->word) {
+word.c:   free(testwordhash->word);
+word.c:   testwordhash->word=NULL;
+word.c:   qbot_freewordrefs(testwordhash->first);
+word.c:   testwordhash->first=testwordhash->wll=NULL;
+word.c:   testwordhash->occ=0;
+word.c:   testwordhash=testwordhash->next;
+word.c:   freeword->next=NULL;
+word.c:    free(testwordhash->word);
+word.c:    testwordhash->word=NULL;
+word.c:    qbot_freewordrefs(testwordhash->first);
+word.c:    testwordhash=testwordhash->next;
